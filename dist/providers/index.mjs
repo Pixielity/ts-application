@@ -1,6 +1,15 @@
 import * as path from 'path';
 import { IConfig, ConfigEnvironment } from '@pixielity/ts-types';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
   get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
@@ -1167,7 +1176,6 @@ var ConfigServiceProvider = class extends ServiceProvider {
   boot() {
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { AppServiceProvider, ConfigServiceProvider };
 //# sourceMappingURL=index.mjs.map

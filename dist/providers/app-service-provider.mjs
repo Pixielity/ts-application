@@ -1,3 +1,13 @@
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
+
 // src/service-provider.ts
 var ServiceProvider = class {
   /**
@@ -24,7 +34,6 @@ var AppServiceProvider = class extends ServiceProvider {
   }
 };
 var app_service_provider_default = AppServiceProvider;
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { AppServiceProvider, app_service_provider_default as default };
 //# sourceMappingURL=app-service-provider.mjs.map

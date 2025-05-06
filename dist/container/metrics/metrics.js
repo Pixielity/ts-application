@@ -1,5 +1,15 @@
 'use strict';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
+
 // src/container/metrics/metrics.ts
 var MetricsCollector = class _MetricsCollector {
   /**
@@ -33,7 +43,6 @@ var MetricsCollector = class _MetricsCollector {
     console.log(`COUNT ${name}=${value} ${tagsString}`);
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 exports.MetricsCollector = MetricsCollector;
 //# sourceMappingURL=metrics.js.map

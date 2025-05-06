@@ -2,6 +2,15 @@
 
 var tsTypes = require('@pixielity/ts-types');
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -2290,7 +2299,6 @@ react/cjs/react.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 */
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 exports.useMultiCacheValues = useMultiCacheValues;
 //# sourceMappingURL=use-multi-cache-values.js.map

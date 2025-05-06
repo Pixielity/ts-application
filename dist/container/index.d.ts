@@ -1,0 +1,10 @@
+export { Container } from './container.js';
+export { ContextualBindingBuilder } from './contextual-binding.js';
+export { loggerMiddleware } from './middleware/logger-middleware.js';
+export { cacheMiddleware, createCacheMiddleware } from './middleware/cache-middleware.js';
+export { metricsMiddleware } from './middleware/metrics-middleware.js';
+import 'inversify';
+import '@pixielity/ts-types';
+import './contextual-builder.js';
+import './metrics/metrics.js';
+import './metrics/metrics.interface.js';

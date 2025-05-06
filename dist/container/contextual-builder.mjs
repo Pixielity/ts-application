@@ -1,3 +1,13 @@
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
+
 // src/container/contextual-builder.ts
 var ContextualBindingImplementationBuilder = class _ContextualBindingImplementationBuilder {
   /**
@@ -64,7 +74,6 @@ var ContextualBindingImplementationBuilder = class _ContextualBindingImplementat
     return typeof func === "function" && /^class\s/.test(Function.prototype.toString.call(func));
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { ContextualBindingImplementationBuilder };
 //# sourceMappingURL=contextual-builder.mjs.map

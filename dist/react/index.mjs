@@ -1,5 +1,14 @@
 import { ICache, IConfig } from '@pixielity/ts-types';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1355,7 +1364,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState9(initialState) {
+        function useState8(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1379,7 +1388,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback6(callback, deps) {
+        function useCallback5(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
@@ -2146,7 +2155,7 @@ var require_react_development = __commonJS({
         exports.memo = memo;
         exports.startTransition = startTransition;
         exports.unstable_act = act;
-        exports.useCallback = useCallback6;
+        exports.useCallback = useCallback5;
         exports.useContext = useContext3;
         exports.useDebugValue = useDebugValue;
         exports.useDeferredValue = useDeferredValue;
@@ -2158,7 +2167,7 @@ var require_react_development = __commonJS({
         exports.useMemo = useMemo;
         exports.useReducer = useReducer;
         exports.useRef = useRef;
-        exports.useState = useState9;
+        exports.useState = useState8;
         exports.useSyncExternalStore = useSyncExternalStore;
         exports.useTransition = useTransition;
         exports.version = ReactVersion;
@@ -2493,51 +2502,19 @@ function withServices(Component, services) {
   };
 }
 
-// src/react/hooks/i18n/use-translator.ts
-function useTranslator() {
-  return useService("translator");
-}
-
-// src/react/hooks/i18n/use-has-translation.ts
-function useHasTranslation(key, options = {}) {
-  const translator = useTranslator();
-  return translator.has(key, options);
-}
-
-// src/react/hooks/i18n/use-locale.ts
-var import_react13 = __toESM(require_react());
-function useLocale() {
-  const translator = useTranslator();
-  const [locale, setLocaleState] = (0, import_react13.useState)(translator.getLocale());
-  const setLocale = (0, import_react13.useCallback)(
-    (newLocale) => {
-      translator.setLocale(newLocale);
-      setLocaleState(newLocale);
-    },
-    [translator]
-  );
-  return [locale, setLocale];
-}
-
-// src/react/hooks/i18n/use-translate.ts
-function useTranslate(key, options = {}) {
-  const translator = useTranslator();
-  return translator.translate(key, options);
-}
-
 // src/react/providers/app.provider.tsx
-var import_react14 = __toESM(require_react());
+var import_react13 = __toESM(require_react());
 function AppProvider({ app, children }) {
-  return /* @__PURE__ */ import_react14.default.createElement(AppContext.Provider, { value: app }, children);
+  return /* @__PURE__ */ import_react13.default.createElement(AppContext.Provider, { value: app }, children);
 }
 
 // src/react/providers/container.provider.tsx
-var import_react15 = __toESM(require_react());
+var import_react14 = __toESM(require_react());
 function ContainerProvider({
   container,
   children
 }) {
-  return /* @__PURE__ */ import_react15.default.createElement(ContainerContext.Provider, { value: container }, children);
+  return /* @__PURE__ */ import_react14.default.createElement(ContainerContext.Provider, { value: container }, children);
 }
 /*! Bundled license information:
 
@@ -2563,8 +2540,7 @@ react/cjs/react.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 */
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
-export { AppContext, AppProvider, ContainerContext, ContainerProvider, useAllConfig, useApp, useCacheValue, useCachedData, useConfig, useConfigState, useContainer, useHasConfig, useHasTranslation, useICache, useLocale, useMultiCacheValues, useResolve, useService, useTranslate, useTranslator, withServices };
+export { AppContext, AppProvider, ContainerContext, ContainerProvider, useAllConfig, useApp, useCacheValue, useCachedData, useConfig, useConfigState, useContainer, useHasConfig, useICache, useMultiCacheValues, useResolve, useService, withServices };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

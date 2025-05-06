@@ -1,6 +1,15 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __decorateClass = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
@@ -220,7 +229,6 @@ var PublishServiceProvider = class extends ServiceProvider {
   boot() {
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { PublishServiceProvider, Publisher };
 //# sourceMappingURL=index.mjs.map

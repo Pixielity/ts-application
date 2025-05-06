@@ -1,5 +1,15 @@
 import 'reflect-metadata';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
+
 // ../../../node_modules/inversify/es/constants/metadata_keys.js
 var NAMED_TAG = "named";
 var NAME_TAG = "name";
@@ -3406,7 +3416,6 @@ var Container2 = class _Container {
     return callback(this);
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { Container2 as Container };
 //# sourceMappingURL=container.mjs.map

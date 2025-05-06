@@ -2,6 +2,15 @@
 
 var tsTypes = require('@pixielity/ts-types');
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
   get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
 }) : x)(function(x) {
@@ -232,7 +241,6 @@ var ModuleConfigLoader = class _ModuleConfigLoader {
     return source;
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 exports.JsonConfigLoader = JsonConfigLoader;
 exports.ModuleConfigLoader = ModuleConfigLoader;

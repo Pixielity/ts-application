@@ -2,6 +2,15 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -2349,7 +2358,6 @@ react/cjs/react.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 */
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 exports.NextJsPlugin = NextJsPlugin;
 exports.createNextJsPlugin = createNextJsPlugin;

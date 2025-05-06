@@ -1,3 +1,13 @@
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
+
 // src/config/validator.ts
 var ConfigValidationError = class _ConfigValidationError extends Error {
   /**
@@ -204,7 +214,6 @@ var ConfigValidator = class _ConfigValidator {
     }
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { ConfigValidationError, ConfigValidator };
 //# sourceMappingURL=validator.mjs.map

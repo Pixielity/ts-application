@@ -2,6 +2,15 @@ import { ConfigEnvironment, IConfig, ICache } from '@pixielity/ts-types';
 import 'reflect-metadata';
 import * as path from 'path';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
   get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
@@ -4758,7 +4767,6 @@ function EnvConfig(options) {
     });
   });
 }
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { Config, ConfigCache, ConfigRepository, ConfigValidationError, ConfigValidator, EnvConfig, JsonConfigLoader, ModuleConfigLoader, detectEnvironment, getNodeEnv, isBrowser, isDevelopment, isNextJs, isNode, isProduction, isReactNative, isTest };
 //# sourceMappingURL=index.mjs.map

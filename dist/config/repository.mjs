@@ -1,5 +1,14 @@
 import { ConfigEnvironment } from '@pixielity/ts-types';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __decorateClass = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
@@ -767,7 +776,6 @@ var ConfigRepository = class {
 ConfigRepository = __decorateClass([
   injectable()
 ], ConfigRepository);
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { ConfigRepository };
 //# sourceMappingURL=repository.mjs.map

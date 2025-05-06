@@ -1,3 +1,13 @@
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
+
 // src/container/middleware/cache-middleware.ts
 function cacheMiddleware(shouldCache = () => true) {
   const cache = /* @__PURE__ */ new Map();
@@ -39,7 +49,6 @@ function createCacheMiddleware(shouldCache) {
   };
   return { middleware, flush };
 }
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { cacheMiddleware, createCacheMiddleware };
 //# sourceMappingURL=cache-middleware.mjs.map

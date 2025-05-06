@@ -15,8 +15,3 @@ export * from "./config/use-has-config"
 export * from "./container/use-container"
 export * from "./container/use-resolve"
 export * from "./container/with-services"
-
-export * from "./i18n/use-has-translation"
-export * from "./i18n/use-locale"
-export * from "./i18n/use-translate"
-export * from "./i18n/use-translator"

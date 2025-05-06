@@ -1,3 +1,13 @@
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
+
 // src/container/middleware/logger-middleware.ts
 function loggerMiddleware(logger = console.log) {
   return (next) => {
@@ -11,7 +21,6 @@ function loggerMiddleware(logger = console.log) {
     };
   };
 }
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { loggerMiddleware };
 //# sourceMappingURL=logger-middleware.mjs.map

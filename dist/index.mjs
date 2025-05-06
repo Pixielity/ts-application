@@ -4,6 +4,15 @@ import { IConfig, ICache, ConfigEnvironment } from '@pixielity/ts-types';
 import * as fs from 'fs';
 import { registerDecorator } from 'class-validator';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1372,7 +1381,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context2);
         }
-        function useState9(initialState) {
+        function useState8(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1396,7 +1405,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback6(callback, deps) {
+        function useCallback5(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
@@ -2163,7 +2172,7 @@ var require_react_development = __commonJS({
         exports.memo = memo;
         exports.startTransition = startTransition;
         exports.unstable_act = act;
-        exports.useCallback = useCallback6;
+        exports.useCallback = useCallback5;
         exports.useContext = useContext3;
         exports.useDebugValue = useDebugValue;
         exports.useDeferredValue = useDeferredValue;
@@ -2175,7 +2184,7 @@ var require_react_development = __commonJS({
         exports.useMemo = useMemo;
         exports.useReducer = useReducer;
         exports.useRef = useRef;
-        exports.useState = useState9;
+        exports.useState = useState8;
         exports.useSyncExternalStore = useSyncExternalStore;
         exports.useTransition = useTransition;
         exports.version = ReactVersion;
@@ -7721,51 +7730,19 @@ function withServices(Component, services) {
   };
 }
 
-// src/react/hooks/i18n/use-translator.ts
-function useTranslator() {
-  return useService("translator");
-}
-
-// src/react/hooks/i18n/use-has-translation.ts
-function useHasTranslation(key, options = {}) {
-  const translator = useTranslator();
-  return translator.has(key, options);
-}
-
-// src/react/hooks/i18n/use-locale.ts
-var import_react13 = __toESM(require_react());
-function useLocale() {
-  const translator = useTranslator();
-  const [locale, setLocaleState] = (0, import_react13.useState)(translator.getLocale());
-  const setLocale = (0, import_react13.useCallback)(
-    (newLocale) => {
-      translator.setLocale(newLocale);
-      setLocaleState(newLocale);
-    },
-    [translator]
-  );
-  return [locale, setLocale];
-}
-
-// src/react/hooks/i18n/use-translate.ts
-function useTranslate(key, options = {}) {
-  const translator = useTranslator();
-  return translator.translate(key, options);
-}
-
 // src/react/providers/app.provider.tsx
-var import_react14 = __toESM(require_react());
+var import_react13 = __toESM(require_react());
 function AppProvider({ app: app2, children }) {
-  return /* @__PURE__ */ import_react14.default.createElement(AppContext.Provider, { value: app2 }, children);
+  return /* @__PURE__ */ import_react13.default.createElement(AppContext.Provider, { value: app2 }, children);
 }
 
 // src/react/providers/container.provider.tsx
-var import_react15 = __toESM(require_react());
+var import_react14 = __toESM(require_react());
 function ContainerProvider({
   container,
   children
 }) {
-  return /* @__PURE__ */ import_react15.default.createElement(ContainerContext.Provider, { value: container }, children);
+  return /* @__PURE__ */ import_react14.default.createElement(ContainerContext.Provider, { value: container }, children);
 }
 var Publisher = class {
   /**
@@ -8166,7 +8143,7 @@ var LogDecorator = class _LogDecorator extends AbstractDecorator {
 };
 
 // src/plugins/nextjs.tsx
-var import_react16 = __toESM(require_react());
+var import_react15 = __toESM(require_react());
 var defaultOptions = {
   autoRegister: true,
   initializeInGetInitialProps: true,
@@ -8218,7 +8195,7 @@ var NextJsPlugin = class {
   withApp(AppComponent) {
     const plugin = this;
     const options = this.options;
-    return class AppWithTsApplication extends import_react16.default.Component {
+    return class AppWithTsApplication extends import_react15.default.Component {
       static async getInitialProps(appContext) {
         if (options.initializeInGetInitialProps) {
           await plugin.initialize();
@@ -8230,7 +8207,7 @@ var NextJsPlugin = class {
         return { ...appProps };
       }
       render() {
-        return /* @__PURE__ */ import_react16.default.createElement(AppComponent, { ...this.props });
+        return /* @__PURE__ */ import_react15.default.createElement(AppComponent, { ...this.props });
       }
     };
   }
@@ -8335,8 +8312,7 @@ react/cjs/react.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 */
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
-export { AbstractDecorator, AbstractValidationDecorator, App, AppContext, AppProvider, AppServiceProvider, Application, Cache as CacheFacade, Config, ConfigCache, Config2 as ConfigFacade, ConfigRepository, ConfigServiceProvider, ConfigValidationError, ConfigValidator, Container2 as Container, ContainerContext, ContainerProvider, ContextualBindingBuilder, EnvConfig, Facade, JsonConfigLoader, LogClass, LogDecorator, LogMethod, ModuleConfigLoader, NextJsPlugin, PublishServiceProvider, Publisher, ServiceProvider, Singleton, SingletonDecorator, app, cacheMiddleware, createCacheMiddleware, createClassDecorator, createFacadeProxy, createMethodDecorator, createNextJsPlugin, createParameterDecorator, createPropertyDecorator, detectEnvironment, getApplication, getNodeEnv, isBrowser, isDevelopment, isNextJs, isNode, isProduction, isReactNative, isTest, loggerMiddleware, metricsMiddleware, nextjs, useAllConfig, useApp, useCacheValue, useCachedData, useConfig, useConfigState, useContainer, useHasConfig, useHasTranslation, useICache, useLocale, useMultiCacheValues, useResolve, useService, useTranslate, useTranslator, withServices };
+export { AbstractDecorator, AbstractValidationDecorator, App, AppContext, AppProvider, AppServiceProvider, Application, Cache as CacheFacade, Config, ConfigCache, Config2 as ConfigFacade, ConfigRepository, ConfigServiceProvider, ConfigValidationError, ConfigValidator, Container2 as Container, ContainerContext, ContainerProvider, ContextualBindingBuilder, EnvConfig, Facade, JsonConfigLoader, LogClass, LogDecorator, LogMethod, ModuleConfigLoader, NextJsPlugin, PublishServiceProvider, Publisher, ServiceProvider, Singleton, SingletonDecorator, app, cacheMiddleware, createCacheMiddleware, createClassDecorator, createFacadeProxy, createMethodDecorator, createNextJsPlugin, createParameterDecorator, createPropertyDecorator, detectEnvironment, getApplication, getNodeEnv, isBrowser, isDevelopment, isNextJs, isNode, isProduction, isReactNative, isTest, loggerMiddleware, metricsMiddleware, nextjs, useAllConfig, useApp, useCacheValue, useCachedData, useConfig, useConfigState, useContainer, useHasConfig, useICache, useMultiCacheValues, useResolve, useService, withServices };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

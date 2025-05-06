@@ -1,6 +1,14 @@
 import { ConfigEnvironment } from '@pixielity/ts-types';
 
-// src/config/environment.ts
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 function detectEnvironment() {
   if (typeof process !== "undefined" && process.versions && process.versions.node) {
     return ConfigEnvironment.NODE;
@@ -106,7 +114,6 @@ var JsonConfigLoader = class _JsonConfigLoader {
     return source.endsWith(".json");
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { JsonConfigLoader };
 //# sourceMappingURL=json-config-loader.mjs.map

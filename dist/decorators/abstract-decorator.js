@@ -2,7 +2,15 @@
 
 require('reflect-metadata');
 
-// src/decorators/abstract-decorator.ts
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 function createClassDecorator(decorator, options = {}) {
   const {
     copyPrototype = true,
@@ -143,7 +151,6 @@ var AbstractDecorator = class {
     throw new Error("Cannot instantiate abstract class");
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 exports.AbstractDecorator = AbstractDecorator;
 exports.createClassDecorator = createClassDecorator;

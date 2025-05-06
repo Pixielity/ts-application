@@ -1,7 +1,3 @@
-/**
- * @file json-config-loader.ts
- * @description Production-ready JSON config loader implementation
- */
 import type { IConfigLoader } from '@pixielity/ts-types'
 
 import { isNode, isBrowser, isNextJs } from '../environment'

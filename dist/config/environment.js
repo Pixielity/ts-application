@@ -2,7 +2,15 @@
 
 var tsTypes = require('@pixielity/ts-types');
 
-// src/config/environment.ts
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 function detectEnvironment() {
   if (typeof process !== "undefined" && process.versions && process.versions.node) {
     return tsTypes.ConfigEnvironment.NODE;
@@ -46,7 +54,6 @@ function isProduction() {
 function isTest() {
   return getNodeEnv() === "test";
 }
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 exports.detectEnvironment = detectEnvironment;
 exports.getNodeEnv = getNodeEnv;

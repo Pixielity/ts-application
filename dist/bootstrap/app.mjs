@@ -2,6 +2,15 @@ import 'reflect-metadata';
 import * as path from 'path';
 import { IConfig, ICache, ConfigEnvironment } from '@pixielity/ts-types';
 
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
   get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
@@ -4689,7 +4698,6 @@ function getApplication() {
 function app() {
   return global.app;
 }
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { app, getApplication };
 //# sourceMappingURL=app.mjs.map

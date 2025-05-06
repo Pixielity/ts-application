@@ -1,6 +1,14 @@
 import 'reflect-metadata';
 
-// src/decorators/abstract-decorator.ts
+/**
+ * @pixielity/ts-mixins v1.0.0
+ * 
+ * Advanced TypeScript application package with metadata inheritance support
+ * 
+ * @license MIT
+ * @copyright 2025 Your Name <your.email@example.com>
+ */
+
 function createClassDecorator(decorator, options = {}) {
   const {
     copyPrototype = true,
@@ -187,7 +195,6 @@ var SingletonDecorator = class _SingletonDecorator extends AbstractDecorator {
     return decorator.createClassDecorator();
   }
 };
-if (typeof module !== "undefined") { module.exports = module.exports.default; }
 
 export { Singleton, SingletonDecorator };
 //# sourceMappingURL=singleton-decorator.mjs.map
