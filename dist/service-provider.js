@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @pixielity/ts-mixins v1.0.0
+ * @pixielity/ts-application v1.0.0
  * 
  * Advanced TypeScript application package with metadata inheritance support
  * 
@@ -11,7 +11,7 @@
 
 
 // src/service-provider.ts
-var ServiceProvider = class {
+var ServiceProvider = class _ServiceProvider {
   /**
    * Create a new service provider instance.
    *
@@ -19,6 +19,19 @@ var ServiceProvider = class {
    */
   constructor(app) {
     this.app = app;
+  }
+  /**
+   * Static factory method to create a new instance of the service provider.
+   *
+   * @param app - The application container instance
+   * @param args - Additional arguments to be passed to the subclass constructor
+   * @returns A new instance of the subclass
+   */
+  static make(app, ...args) {
+    if (this === _ServiceProvider) {
+      throw new Error("Cannot instantiate an abstract class directly.");
+    }
+    return new this(app, ...args);
   }
 };
 

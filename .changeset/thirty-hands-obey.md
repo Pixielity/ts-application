@@ -1,5 +1,5 @@
 ---
-'@pixielity/ts-mixins': major
+'@pixielity/ts-application': major
 ---
 
 Refactoring the code

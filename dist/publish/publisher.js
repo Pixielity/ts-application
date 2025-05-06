@@ -25,7 +25,7 @@ var fs__namespace = /*#__PURE__*/_interopNamespace(fs);
 var path__namespace = /*#__PURE__*/_interopNamespace(path);
 
 /**
- * @pixielity/ts-mixins v1.0.0
+ * @pixielity/ts-application v1.0.0
  * 
  * Advanced TypeScript application package with metadata inheritance support
  * 

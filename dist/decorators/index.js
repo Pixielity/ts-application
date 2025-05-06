@@ -4,7 +4,7 @@ require('reflect-metadata');
 var classValidator = require('class-validator');
 
 /**
- * @pixielity/ts-mixins v1.0.0
+ * @pixielity/ts-application v1.0.0
  * 
  * Advanced TypeScript application package with metadata inheritance support
  * 

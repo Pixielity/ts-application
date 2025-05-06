@@ -3,7 +3,7 @@
 var tsTypes = require('@pixielity/ts-types');
 
 /**
- * @pixielity/ts-mixins v1.0.0
+ * @pixielity/ts-application v1.0.0
  * 
  * Advanced TypeScript application package with metadata inheritance support
  * 

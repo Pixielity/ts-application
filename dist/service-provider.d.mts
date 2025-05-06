@@ -6,31 +6,18 @@ import { IContainer } from '@pixielity/ts-types';
  * and bootstrapping any dependencies.
  *
  * @example
- * ```typescript
+ * ```ts
  * class CacheServiceProvider extends ServiceProvider {
  *   register(): void {
- *     this.app.singleton('cache', () => {
- *       return new ICache(this.app);
- *     });
- *   }
- *
- *   boot(): void {
- *     // Bootstrap the cache service
- *   }
- *
- *   terminate(): void {
- *     // Graceful shutdown logic
- *   }
- *
- *   publish(): void {
- *     // Optional logic for publishing configuration/files
+ *     this.app.singleton('cache', () => new ICache(this.app))
  *   }
  * }
+ * const provider = CacheServiceProvider.make(app)
  * ```
  */
 declare abstract class ServiceProvider {
     /**
-     * The application instance.
+     * The application container instance.
      */
     app: IContainer;
     /**
@@ -39,6 +26,14 @@ declare abstract class ServiceProvider {
      * @param app - The application container instance
      */
     constructor(app: IContainer);
+    /**
+     * Static factory method to create a new instance of the service provider.
+     *
+     * @param app - The application container instance
+     * @param args - Additional arguments to be passed to the subclass constructor
+     * @returns A new instance of the subclass
+     */
+    static make<T extends typeof ServiceProvider>(this: T, app: IContainer, ...args: ConstructorParameters<T>): InstanceType<T>;
     /**
      * Register any application services.
      * This method is called when the service provider is registered with the container.

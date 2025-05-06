@@ -1,9 +1,9 @@
 # TS Mixins
 
-[![npm version](https://img.shields.io/npm/v/ts-mixins.svg)](https://www.npmjs.com/package/ts-mixins)
+[![npm version](https://img.shields.io/npm/v/ts-application.svg)](https://www.npmjs.com/package/ts-application)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/pixielity/ts-mixins/workflows/CI/badge.svg)](https://github.com/pixielity/ts-mixins/actions)
-[![Coverage Status](https://coveralls.io/repos/github/pixielity/ts-mixins/badge.svg?branch=main)](https://coveralls.io/github/pixielity/ts-mixins?branch=main)
+[![Build Status](https://github.com/pixielity/ts-application/workflows/CI/badge.svg)](https://github.com/pixielity/ts-application/actions)
+[![Coverage Status](https://coveralls.io/repos/github/pixielity/ts-application/badge.svg?branch=main)](https://coveralls.io/github/pixielity/ts-application?branch=main)
 
 A powerful TypeScript mixin library with full type safety, decorator support, and flexible configuration.
 
@@ -22,21 +22,21 @@ A powerful TypeScript mixin library with full type safety, decorator support, an
 
 # npm
 
-npm install ts-mixins
+npm install ts-application
 
 # yarn
 
-yarn add ts-mixins
+yarn add ts-application
 
 # pnpm
 
-pnpm add ts-mixins
+pnpm add ts-application
 ```
 
 ## Basic Usage
 
 ```typescript
-import { Mixin } from 'ts-mixins';
+import { Mixin } from 'ts-application';
 
 // Define your classes
 class Logger {
@@ -63,7 +63,7 @@ console.log(instance.serialize()); // {"message":"Hello, world!"}
 ## Using the Decorator
 
 ```typescript
-import { Mix } from 'ts-mixins';
+import { Mix } from 'ts-application';
 
 class Logger {
 log(message: string) {
@@ -96,7 +96,7 @@ console.log(user.serialize()); // {"name":"John"}
 TS Mixins provides several configuration options to customize its behavior:
 
 ```typescript
-import { settings } from 'ts-mixins';
+import { settings } from 'ts-application';
 
 // Configure initialization function
 settings.initFunction = 'initialize';
@@ -125,7 +125,7 @@ settings.decoratorInheritance = 'direct'; // 'deep' (default), 'direct', or 'non
 ### Working with Abstract Classes
 
 ```typescript
-import { Mixin } from 'ts-mixins';
+import { Mixin } from 'ts-application';
 
 abstract class Entity {
 id: string;
@@ -162,7 +162,7 @@ console.log(product.getType()); // Product
 ### Tracking Mixins
 
 ```typescript
-import { Mixin, hasMixin, getMixinsForClass } from 'ts-mixins';
+import { Mixin, hasMixin, getMixinsForClass } from 'ts-application';
 
 class A {
 methodA() { return 'A'; }
@@ -187,7 +187,7 @@ console.log(mixins); // [A, B]
 ### Decorator Inheritance
 
 ```typescript
-import { Mixin, Decorate } from 'ts-mixins';
+import { Mixin, Decorate } from 'ts-application';
 
 function LogClass(target: any) {
 console.log(`Class ${target.name} was decorated`);

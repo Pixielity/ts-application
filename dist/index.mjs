@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import { registerDecorator } from 'class-validator';
 
 /**
- * @pixielity/ts-mixins v1.0.0
+ * @pixielity/ts-application v1.0.0
  * 
  * Advanced TypeScript application package with metadata inheritance support
  * 
@@ -5629,7 +5629,7 @@ var Container2 = class _Container {
 };
 
 // src/service-provider.ts
-var ServiceProvider = class {
+var ServiceProvider = class _ServiceProvider {
   /**
    * Create a new service provider instance.
    *
@@ -5637,6 +5637,19 @@ var ServiceProvider = class {
    */
   constructor(app2) {
     this.app = app2;
+  }
+  /**
+   * Static factory method to create a new instance of the service provider.
+   *
+   * @param app - The application container instance
+   * @param args - Additional arguments to be passed to the subclass constructor
+   * @returns A new instance of the subclass
+   */
+  static make(app2, ...args) {
+    if (this === _ServiceProvider) {
+      throw new Error("Cannot instantiate an abstract class directly.");
+    }
+    return new this(app2, ...args);
   }
 };
 function detectEnvironment() {
