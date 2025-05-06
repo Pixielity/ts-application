@@ -834,4 +834,40 @@ export class Container implements IContainer {
   public call<T>(callback: (container: IContainer) => T): T {
     return callback(this as IContainer)
   }
+
+  /**
+   * Get all bindings registered in the container.
+   *
+   * @param serviceIdentifier - Optional service identifier to filter bindings
+   * @returns An array of bindings
+   */
+  public getBindings(serviceIdentifier?: ServiceIdentifier<any>): interfaces.Binding<any>[] {
+    // Access the internal binding dictionary from the Inversify container
+    const bindingDictionary = (this.inversifyContainer as any)._bindingDictionary
+
+    if (!bindingDictionary) {
+      return []
+    }
+
+    if (serviceIdentifier) {
+      // If a service identifier is provided, return only bindings for that service
+      return bindingDictionary.hasKey(serviceIdentifier)
+        ? bindingDictionary.get(serviceIdentifier)
+        : []
+    } else {
+      // Otherwise, return all bindings
+      const allBindings: interfaces.Binding<any>[] = []
+
+      // Get all keys from the binding dictionary
+      const keys = bindingDictionary.keys()
+
+      // Collect all bindings for each key
+      for (const key of keys) {
+        const bindings = bindingDictionary.get(key)
+        allBindings.push(...bindings)
+      }
+
+      return allBindings
+    }
+  }
 }

@@ -3450,6 +3450,29 @@ var Container2 = class _Container {
   call(callback) {
     return callback(this);
   }
+  /**
+   * Get all bindings registered in the container.
+   *
+   * @param serviceIdentifier - Optional service identifier to filter bindings
+   * @returns An array of bindings
+   */
+  getBindings(serviceIdentifier) {
+    const bindingDictionary = this.inversifyContainer._bindingDictionary;
+    if (!bindingDictionary) {
+      return [];
+    }
+    if (serviceIdentifier) {
+      return bindingDictionary.hasKey(serviceIdentifier) ? bindingDictionary.get(serviceIdentifier) : [];
+    } else {
+      const allBindings = [];
+      const keys = bindingDictionary.keys();
+      for (const key of keys) {
+        const bindings = bindingDictionary.get(key);
+        allBindings.push(...bindings);
+      }
+      return allBindings;
+    }
+  }
 };
 
 // src/service-provider.ts
