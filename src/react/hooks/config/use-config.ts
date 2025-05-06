@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { useService } from "../app/use-service"
+import { useState, useEffect } from 'react'
+import { useService } from '../app/use-service'
 import { IConfig, type IConfigRepository } from '@pixielity/ts-types'
 
 /**

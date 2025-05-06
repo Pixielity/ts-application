@@ -1,5 +1,5 @@
-import { ServiceIdentifier } from "@pixielity/ts-types"
-import { useApp } from "./use-app"
+import { ServiceIdentifier } from '@pixielity/ts-types'
+import { useApp } from './use-app'
 
 /**
  * Hook to use a service from the Application container

@@ -1,4 +1,4 @@
-import { getApplication } from "../bootstrap/app"
+import { getApplication } from '../bootstrap/app'
 
 /**
  * Base facade class that provides static access to services.
@@ -10,7 +10,7 @@ export abstract class Facade {
    * @returns The registered name of the component
    */
   protected static getFacadeAccessor(): string {
-    throw new Error("Facade accessor not implemented")
+    throw new Error('Facade accessor not implemented')
   }
 
   /**
@@ -43,7 +43,7 @@ export abstract class Facade {
       throw new Error(`A facade root has not been set for ${this.constructor.name}`)
     }
 
-    if (typeof instance[method] !== "function") {
+    if (typeof instance[method] !== 'function') {
       throw new Error(`Method ${method} does not exist on ${this.constructor.name}`)
     }
 

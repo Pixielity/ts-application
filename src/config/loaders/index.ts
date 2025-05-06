@@ -1,2 +1,2 @@
-export * from "./json-config-loader"
-export * from "./module-config-loader"
+export * from './json-config-loader'
+export * from './module-config-loader'

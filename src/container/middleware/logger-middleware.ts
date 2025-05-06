@@ -1,4 +1,4 @@
-import type { interfaces } from "inversify"
+import type { interfaces } from 'inversify'
 
 /**
  * Create a logger middleware for the Inversify container
@@ -6,7 +6,9 @@ import type { interfaces } from "inversify"
  * @param logger - The logger function (defaults to console.log)
  * @returns The logger middleware
  */
-export function loggerMiddleware(logger: (message: string) => void = console.log): interfaces.Middleware {
+export function loggerMiddleware(
+  logger: (message: string) => void = console.log,
+): interfaces.Middleware {
   return (next: interfaces.Next) => {
     return (args: interfaces.NextArgs) => {
       const { serviceIdentifier } = args

@@ -1,5 +1,5 @@
-import { Facade, createFacadeProxy } from "./facade"
-import type { ICache } from "@pixielity/ts-types"
+import { Facade, createFacadeProxy } from './facade'
+import type { ICache } from '@pixielity/ts-types'
 
 /**
  * Cache facade that provides static access to the cache manager.
@@ -23,7 +23,7 @@ class CacheFacade extends Facade {
    * @returns The registered name of the component
    */
   protected static getFacadeAccessor(): string {
-    return "cache"
+    return 'cache'
   }
 
   /**

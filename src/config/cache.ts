@@ -120,7 +120,7 @@ export class ConfigCache implements IConfigCache {
 
     const item: ICacheItem<T> = {
       value,
-      created: 0
+      created: 0,
     }
 
     // Set expiration if TTL is configured

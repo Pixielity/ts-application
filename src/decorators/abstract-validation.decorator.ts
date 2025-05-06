@@ -1,4 +1,4 @@
-import { registerDecorator, type ValidationOptions } from "class-validator"
+import { registerDecorator, type ValidationOptions } from 'class-validator'
 import type { IValidationFunction } from '@pixielity/ts-types'
 
 /**

@@ -17,7 +17,7 @@ export class ConfigValidationError extends Error {
    */
   constructor(message: string, errors: string[] = []) {
     super(message)
-    this.name = "ConfigValidationError"
+    this.name = 'ConfigValidationError'
     this.errors = errors
   }
 
@@ -65,7 +65,10 @@ export class ConfigValidator implements IConfigValidator {
    * @param autoDetectSchemas - Whether to auto-detect schemas from $schema properties
    * @returns A new configuration validator
    */
-  public static make(schemas: Record<string, IConfigSchema> = {}, autoDetectSchemas = true): ConfigValidator {
+  public static make(
+    schemas: Record<string, IConfigSchema> = {},
+    autoDetectSchemas = true,
+  ): ConfigValidator {
     return new ConfigValidator(schemas, autoDetectSchemas)
   }
 
@@ -109,18 +112,18 @@ export class ConfigValidator implements IConfigValidator {
     // Check for auto-detected schema in the value itself
     let schema = this.schemas[key]
 
-    if (this.autoDetectSchemas && value && typeof value === "object" && value.$schema) {
+    if (this.autoDetectSchemas && value && typeof value === 'object' && value.$schema) {
       // If the value has a $schema property, use it for validation
       try {
         // The $schema could be a direct schema object or a reference to a schema
-        if (typeof value.$schema === "string") {
+        if (typeof value.$schema === 'string') {
           // If it's a string, check if we have this schema registered
           if (this.schemas[value.$schema]) {
             schema = this.schemas[value.$schema]
           } else {
             console.warn(`Schema reference '${value.$schema}' not found in registered schemas`)
           }
-        } else if (typeof value.$schema === "object") {
+        } else if (typeof value.$schema === 'object') {
           // If it's an object, use it directly as the schema
           schema = value.$schema
         }
@@ -155,7 +158,7 @@ export class ConfigValidator implements IConfigValidator {
     const errors: string[] = []
 
     // Skip validation for the $schema property itself
-    if (path.endsWith(".$schema")) {
+    if (path.endsWith('.$schema')) {
       return errors
     }
 
@@ -171,11 +174,11 @@ export class ConfigValidator implements IConfigValidator {
 
     // Check enum
     if (schema.enum && !schema.enum.includes(value)) {
-      errors.push(`${path}: Value must be one of [${schema.enum.join(", ")}]`)
+      errors.push(`${path}: Value must be one of [${schema.enum.join(', ')}]`)
     }
 
     // Check min/max for numbers
-    if (schema.type === "number" || schema.type === "integer") {
+    if (schema.type === 'number' || schema.type === 'integer') {
       if (schema.minimum !== undefined && value < schema.minimum) {
         errors.push(`${path}: Value must be >= ${schema.minimum}`)
       }
@@ -185,7 +188,7 @@ export class ConfigValidator implements IConfigValidator {
     }
 
     // Check minLength/maxLength for strings
-    if (schema.type === "string") {
+    if (schema.type === 'string') {
       if (schema.minLength !== undefined && value.length < schema.minLength) {
         errors.push(`${path}: String length must be >= ${schema.minLength}`)
       }
@@ -198,10 +201,10 @@ export class ConfigValidator implements IConfigValidator {
     }
 
     // Check properties for objects
-    if (schema.type === "object" && schema.properties) {
+    if (schema.type === 'object' && schema.properties) {
       Object.entries(schema.properties).forEach(([propName, propSchema]) => {
         // Skip validation for the $schema property
-        if (propName === "$schema") {
+        if (propName === '$schema') {
           return
         }
 
@@ -221,7 +224,7 @@ export class ConfigValidator implements IConfigValidator {
     }
 
     // Check items for arrays
-    if (schema.type === "array" && schema.items && Array.isArray(value)) {
+    if (schema.type === 'array' && schema.items && Array.isArray(value)) {
       value.forEach((item, index) => {
         const itemPath = `${path}[${index}]`
         errors.push(...this.validateAgainstSchema(item, schema.items!, itemPath))
@@ -241,19 +244,19 @@ export class ConfigValidator implements IConfigValidator {
    */
   private checkType(value: any, type: string): boolean {
     switch (type) {
-      case "string":
-        return typeof value === "string"
-      case "number":
-        return typeof value === "number" && !isNaN(value)
-      case "integer":
-        return typeof value === "number" && !isNaN(value) && Number.isInteger(value)
-      case "boolean":
-        return typeof value === "boolean"
-      case "array":
+      case 'string':
+        return typeof value === 'string'
+      case 'number':
+        return typeof value === 'number' && !isNaN(value)
+      case 'integer':
+        return typeof value === 'number' && !isNaN(value) && Number.isInteger(value)
+      case 'boolean':
+        return typeof value === 'boolean'
+      case 'array':
         return Array.isArray(value)
-      case "object":
-        return typeof value === "object" && value !== null && !Array.isArray(value)
-      case "null":
+      case 'object':
+        return typeof value === 'object' && value !== null && !Array.isArray(value)
+      case 'null':
         return value === null
       default:
         return true

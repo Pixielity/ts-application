@@ -1,7 +1,7 @@
-import type { IApplication } from "@pixielity/ts-types"
+import type { IApplication } from '@pixielity/ts-types'
 
 // Re-export the getApplication function
-export { getApplication } from "../application"
+export { getApplication } from '../application'
 
 /**
  * Helper function to access the global app instance

@@ -1,5 +1,5 @@
-import { Facade, createFacadeProxy } from "./facade"
-import type { IApplication } from "@pixielity/ts-types"
+import { Facade, createFacadeProxy } from './facade'
+import type { IApplication } from '@pixielity/ts-types'
 
 /**
  * App facade that provides static access to the application instance.
@@ -23,7 +23,7 @@ class AppFacade extends Facade {
    * @returns The registered name of the component
    */
   protected static getFacadeAccessor(): string {
-    return "app"
+    return 'app'
   }
 }
 

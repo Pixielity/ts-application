@@ -5,37 +5,37 @@ export default {
   /**
    * The application name.
    */
-  name: "TS Nextjs App",
+  name: 'TS Nextjs App',
 
   /**
    * The application environment.
    */
-  env: process.env.NODE_ENV || "development",
+  env: process.env.NODE_ENV || 'development',
 
   /**
    * Whether the application is in debug mode.
    */
-  debug: process.env.APP_DEBUG === "true",
+  debug: process.env.APP_DEBUG === 'true',
 
   /**
    * The application URL.
    */
-  url: process.env.APP_URL || "http://localhost",
+  url: process.env.APP_URL || 'http://localhost',
 
   /**
    * The application timezone.
    */
-  timezone: "UTC",
+  timezone: 'UTC',
 
   /**
    * The application locale.
    */
-  locale: "en",
+  locale: 'en',
 
   /**
    * The application fallback locale.
    */
-  fallback_locale: "en",
+  fallback_locale: 'en',
 
   /**
    * The application key.
@@ -45,7 +45,7 @@ export default {
   /**
    * The application cipher.
    */
-  cipher: "AES-256-CBC",
+  cipher: 'AES-256-CBC',
 
   /**
    * The service providers for the application.
@@ -58,7 +58,7 @@ export default {
    * The application aliases.
    */
   aliases: {
-    App: "App\\Facades\\App",
-    Config: "App\\Facades\\Config",
+    App: 'App\\Facades\\App',
+    Config: 'App\\Facades\\Config',
   },
 }

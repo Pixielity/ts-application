@@ -1,4 +1,4 @@
-import { AbstractDecorator, createClassDecorator } from "./abstract-decorator"
+import { AbstractDecorator, createClassDecorator } from './abstract-decorator'
 
 /**
  * Singleton instances cache

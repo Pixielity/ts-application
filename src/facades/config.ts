@@ -1,5 +1,5 @@
-import { Facade, createFacadeProxy } from "./facade"
-import type { IConfigRepository } from "@pixielity/ts-types"
+import { Facade, createFacadeProxy } from './facade'
+import type { IConfigRepository } from '@pixielity/ts-types'
 
 /**
  * Config facade that provides static access to the configuration repository.
@@ -23,7 +23,7 @@ class ConfigFacade extends Facade {
    * @returns The registered name of the component
    */
   protected static getFacadeAccessor(): string {
-    return "config"
+    return 'config'
   }
 }
 
